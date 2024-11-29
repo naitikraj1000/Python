@@ -41,7 +41,7 @@ print(str)
 # print(mylist[1:]) # It will give the elements from index 1 to end
 
 
-# myD ={1:'a',2:'b',3:'c'} # It is like a dictionary in pythons (key-value pairs)
+myD ={1:'a',2:'b',3:'c'} # It is like a dictionary in pythons (key-value pairs)
 # print(myD) # It will print the dictionary
 
 # print(myD[1]) # It will give the value of key 1
@@ -49,7 +49,13 @@ print(str)
 # print(myD) # It will print the dictionary
 # print(myD.keys()) # It will give the list of all the keys
 # print(myD.values()) # It will give the list of all the values
-# print(myD.items()) # It will give the list of all the key-value pairs
+# print(myD.items()) # It will give the list (tuple) of all the key-value pairs
+# all_items=myD.items()
+
+# for i in myD:
+#     print(i,myD[i])
+
+
 # myd["name"]="Ali" # We can add new key-value pair in the dictionary
 
 # TIME COMPLEXITY -> O(1)

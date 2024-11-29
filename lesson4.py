@@ -1,10 +1,10 @@
 # Internal working of python | Copy, reference counts, slice
 
-var1=10
-var2=10
+# var1=10000
+# var2=10000
 
-print(f"Address of var1: {hex(id(var1))}")
-print(f"Address of var2: {hex(id(var2))}")
+# print(f"Address of var1: {hex(id(var1))}")
+# print(f"Address of var2: {hex(id(var2))}")
 
 # The address of var1 and var2 is same because of the concept of reference counting in python
 # It optimizes the memory by pointing the same address to the same value
@@ -34,8 +34,11 @@ print(f"Address of var3: {hex(id(var3))}")
 # but if u give the same reference to the new object it will point to the same address of the old object
 
 mylist1=[1,2,3,4,5]
+# mylist2=[1,2,3,4,5] # It will create a new memory for mylist2
 mylist2=mylist1 # Shallow copy (It will point to the same address of mylist1)
 mylist2[0]=191 # It will change the value of mylist1 also in memory
+mylist1.append(6) # It will change the value of mylist2 also in memory
+
 print(f"Address of mylist1: {hex(id(mylist1))}",mylist1)
 
 print(f"Address of mylist2: {hex(id(mylist2))}",mylist2)
@@ -73,6 +76,6 @@ print(f"Address of mylist6: {hex(id(mylist6))}",mylist6)
 
 
 # In short 
-# Mutable object can't change their values so if the value repeat it will point to the same address in the case of mutable object
-# for immutable object it will create a new memory for the new object as the value can't be changed in the same memory
-# But for both case if declare a value it will create a new memory for the new object
+# Immutable object can't change their values so if the value repeat it will point to the same address in the case of mutable object 
+# But Not always in case of immutable object if number are large it will create a new memory for the new object
+# for Mutable object it will create a new memory for the new object as the value can be changed in the same memory
