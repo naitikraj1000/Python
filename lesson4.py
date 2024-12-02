@@ -1,10 +1,11 @@
 # Internal working of python | Copy, reference counts, slice
 
-# var1=10000
-# var2=10000
+var1=10000
+var2=10000
 
-# print(f"Address of var1: {hex(id(var1))}")
-# print(f"Address of var2: {hex(id(var2))}")
+print(f"Address of var1: {hex(id(var1))}")
+print(f"Address of var2: {hex(id(var2))}")
+print(var1 is var2)
 
 # The address of var1 and var2 is same because of the concept of reference counting in python
 # It optimizes the memory by pointing the same address to the same value
@@ -78,4 +79,37 @@ print(f"Address of mylist6: {hex(id(mylist6))}",mylist6)
 # In short 
 # Immutable object can't change their values so if the value repeat it will point to the same address in the case of mutable object 
 # But Not always in case of immutable object if number are large it will create a new memory for the new object
+# When values are the same, they often point to the same memory address (but this is an optimization, not a guarantee)
+
 # for Mutable object it will create a new memory for the new object as the value can be changed in the same memory
+
+
+
+
+
+t1=[1,2,3,4,5]
+t2=t1[:]
+
+print(f"Address of t1: {hex(id(t1))}",t1)
+print(f"Address of t2: {hex(id(t2))}",t2)
+
+
+print( t1[0] is t2[0]) # It will give True as the value of t1 and t2 is same so it will point to the same address
+print( id(t1[0]))
+print( id(t2[0]))
+
+
+
+# def add_two_to_list(my_list=[]):
+    
+#     my_list.append(2)
+#     return my_list
+# first = add_two_to_list()
+# print(first)
+# second = add_two_to_list()
+# print(second)
+
+
+# Note if we pass default parameter it will point to the same address of the default parameter and used the same memory so it will change the value of the default parameter
+
+

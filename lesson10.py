@@ -1,11 +1,13 @@
-from functools import cmp_to_key
+# from functools import cmp_to_key
+# from collections import *
+# import heapq
 
 
-def cmp2(a,b):
-    if a>b:
-        return -1
-    else :
-        return 1
+# def cmp2(a,b):
+#     if a>b:
+#         return -1
+#     else :
+#         return 1
 
 # def cmp(a,b):
 #     if a[0] < b[0]:
@@ -19,6 +21,11 @@ def cmp2(a,b):
 #             return 1
 #         return 0
         
+# def is_present_in_hash(hashmap,key):
+#     if key in hashmap:
+#         return True
+#     return False
+            
         
 # data =[17,21,19,34,29,25,23,28,31,27,24,26,22,20,18]
 
@@ -55,7 +62,7 @@ def cmp2(a,b):
 
 
 # Ordered map in C++
-from sortedcontainers import SortedDict,SortedSet,SortedList  #(sortedList is Multiset in C++)
+# from sortedcontainers import SortedDict,SortedSet,SortedList  #(sortedList is Multiset in C++)
 # print("shdb")
 
 # ``for i in range(10,100,2):
@@ -87,7 +94,7 @@ from sortedcontainers import SortedDict,SortedSet,SortedList  #(sortedList is Mu
 
 
 # Priority Queue in Python
-# import heapq
+
 
 # min_heap=[]
 # heapq.heappush(min_heap,10)
@@ -99,12 +106,13 @@ from sortedcontainers import SortedDict,SortedSet,SortedList  #(sortedList is Mu
 # heapq.heappush(min_heap,7)
 # heapq.heappush(min_heap,9)
 
+
 # print("Min heap is: ",min_heap)
 
 
 # print("Top element is: ",min_heap[0])
 # heapq.heappop(min_heap)
-
+# print("Min heap is: ",min_heap)
 # print("Top element is: ",min_heap[0])
 
 
@@ -161,6 +169,25 @@ from sortedcontainers import SortedDict,SortedSet,SortedList  #(sortedList is Mu
 # a=student("test")
 # print(a.roll_no)
 # print(a.college)
+
+
+
+
+
+
+
+
+
+
+queue=deque()
+queue.append(10)
+queue.append(20)
+queue.append(30)
+queue.append(40)
+
+print("Deque is: ",queue)
+queue.popleft()
+print("Deque is: ",queue)
 
 
 

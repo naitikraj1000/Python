@@ -1,4 +1,13 @@
 
+import sys
+import os
+import math
+import functools
+import itertools
+import string
+import random
+
+# Add any other standard library modules you need
 # def factorial (n):
 #     if n == 1:
 #         return 1
@@ -79,6 +88,11 @@
 # s[I:J:K] will return substring starting from I to J-1 with step K
 
 
+#reversing  
+# arr=[1,18,9,12,11,20,28,15,17,99]
+# arr[i:j]=arr[i:j][::-1]
+
+
 
 # Sorting in Python 
 
@@ -89,6 +103,23 @@ print(arr)
 
 
 
+
+
+def swap(x,y):
+    temp=x
+    x=y
+    y=temp
+    
+
+
+
+a=5
+b=6
+print(a,b)
+swap(a,b)
+print(a,b)    
+    
+    
     
         
 
